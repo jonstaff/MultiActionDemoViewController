@@ -1,9 +1,17 @@
 # MultiActionDemoViewController
 
-[![CI Status](http://img.shields.io/travis/Jonathon Staff/MultiActionDemoViewController.svg?style=flat)](https://travis-ci.org/Jonathon Staff/MultiActionDemoViewController)
-[![Version](https://img.shields.io/cocoapods/v/MultiActionDemoViewController.svg?style=flat)](http://cocoapods.org/pods/MultiActionDemoViewController)
-[![License](https://img.shields.io/cocoapods/l/MultiActionDemoViewController.svg?style=flat)](http://cocoapods.org/pods/MultiActionDemoViewController)
-[![Platform](https://img.shields.io/cocoapods/p/MultiActionDemoViewController.svg?style=flat)](http://cocoapods.org/pods/MultiActionDemoViewController)
+There really isn't much to it—just a simple view controller subclass that allows you to
+add `Action`s as you see fit.  I get tired of creating the same boilerplate code over and
+over when I'm prototyping small things, so this takes that out of the equation.
+
+An `Action` is merely a closure that will be invoked when the button is clicked. Just be
+careful to use `[weak self]` if you're referencing anything on the owning object.
+
+## Screenshots
+
+![screen1](./screenshots/screen1.png)
+![screen2](./screenshots/screen2.png)
+![screen3](./screenshots/screen3.png)
 
 ## Example
 
