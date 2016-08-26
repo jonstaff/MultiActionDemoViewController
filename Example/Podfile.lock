@@ -1,0 +1,14 @@
+PODS:
+  - MultiActionDemoViewController (0.1.0)
+
+DEPENDENCIES:
+  - MultiActionDemoViewController (from `../`)
+
+EXTERNAL SOURCES:
+  MultiActionDemoViewController:
+    :path: ../
+
+SPEC CHECKSUMS:
+  MultiActionDemoViewController: d180d37e1900babf50f56015413346141cd831a4
+
+COCOAPODS: 0.39.0
