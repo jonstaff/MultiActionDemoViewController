@@ -19,6 +19,8 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
+Only runs on iOS 9.0+ (sorry, I'm lazy and use `UIStackView`).
+
 ## Installation
 
 MultiActionDemoViewController is available through [CocoaPods](http://cocoapods.org). To install
