@@ -8,35 +8,22 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MultiActionDemoViewController'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of MultiActionDemoViewController.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
+  s.version          = '1.0.0'
+  s.summary          = 'A simple view controller with buttons and associated actions to simplify testing.'
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+I have a frequent need for loading an app that does a number of specified actions upon clicking a 
+button. To simplify this process for future use, just subclass `MultiActionDemoViewController`
+(or instantiate one and add some `Action`s). It will handle all the boilerplate layout of the
+buttons for you.
+
+That's really all there is to it.
                        DESC
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/MultiActionDemoViewController'
+  s.homepage         = 'https://github.com/jonstaff/MultiActionDemoViewController'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Jonathon Staff' => 'jon@nplexity.com' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/MultiActionDemoViewController.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
-  s.ios.deployment_target = '8.0'
-
+  s.source           = { :git => 'https://github.com/jonstaff/MultiActionDemoViewController.git', :tag => s.version.to_s }
+  s.ios.deployment_target = '9.0'
   s.source_files = 'MultiActionDemoViewController/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'MultiActionDemoViewController' => ['MultiActionDemoViewController/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
