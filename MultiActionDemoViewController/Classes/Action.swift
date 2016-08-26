@@ -11,4 +11,9 @@ import Foundation
 public struct Action {
   public let title: String
   public let action: () -> ()
+
+  public init(title: String, action: () -> ()) {
+    self.title = title
+    self.action = action
+  }
 }
