@@ -9,9 +9,9 @@ careful to use `[weak self]` if you're referencing anything on the owning object
 
 ## Screenshots
 
-![screen1](./screenshots/screen1.png)
-![screen2](./screenshots/screen2.png)
-![screen3](./screenshots/screen3.png)
+<img src="./screenshots/screen1.png" width="200">
+<img src="./screenshots/screen2.png" width="200">
+<img src="./screenshots/screen3.png" width="200">
 
 ## Example
 
