@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MultiActionDemoViewController'
-  s.version          = '1.0.0'
+  s.version          = '1.1.0'
   s.summary          = 'A simple view controller with buttons and associated actions to simplify testing.'
   s.description      = <<-DESC
 I have a frequent need for loading an app that does a number of specified actions upon clicking a 
