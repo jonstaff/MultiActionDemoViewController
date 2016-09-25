@@ -12,7 +12,7 @@ public struct Action {
   public let title: String
   public let action: () -> ()
 
-  public init(title: String, action: () -> ()) {
+  public init(title: String, action: @escaping () -> ()) {
     self.title = title
     self.action = action
   }

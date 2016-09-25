@@ -8,19 +8,19 @@
 
 import UIKit
 
-public class MultiActionDemoViewController: UIViewController {
-  public var actions: [Action] = [] {
+open class MultiActionDemoViewController: UIViewController {
+  open var actions: [Action] = [] {
     didSet {
       updateButtons()
     }
   }
 
-  private var lookupTable: [UIButton: Action] = [:]
-  private weak var stackView: UIStackView?
+  fileprivate var lookupTable: [UIButton: Action] = [:]
+  fileprivate weak var stackView: UIStackView?
 
-  public override func viewDidLoad() {
+  open override func viewDidLoad() {
     super.viewDidLoad()
-    view.backgroundColor = .whiteColor()
+    view.backgroundColor = .white
     updateButtons()
   }
 }
@@ -31,17 +31,17 @@ private extension MultiActionDemoViewController {
     lookupTable.removeAll()
 
     let stackView = UIStackView()
-    stackView.distribution = .FillEqually
-    stackView.axis = .Vertical
-    stackView.alignment = .Center
-    stackView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+    stackView.distribution = .fillEqually
+    stackView.axis = .vertical
+    stackView.alignment = .center
+    stackView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     stackView.frame = CGRect(origin: CGPoint.zero, size: view.bounds.size)
     view.addSubview(stackView)
 
     for action in actions {
-      let button = UIButton(type: .System)
-      button.setTitle(action.title, forState: .Normal)
-      button.addTarget(self, action: #selector(invokeAction), forControlEvents: .TouchUpInside)
+      let button = UIButton(type: .system)
+      button.setTitle(action.title, for: UIControlState())
+      button.addTarget(self, action: #selector(invokeAction), for: .touchUpInside)
       lookupTable[button] = action
       stackView.addArrangedSubview(button)
     }
@@ -49,7 +49,7 @@ private extension MultiActionDemoViewController {
     self.stackView = stackView
   }
 
-  @objc func invokeAction(button: UIButton) {
+  @objc func invokeAction(_ button: UIButton) {
     if let action = lookupTable[button] {
       action.action()
     } else {

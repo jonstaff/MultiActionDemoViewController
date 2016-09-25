@@ -22,9 +22,9 @@ class ViewController: MultiActionDemoViewController {
     let alertAction = Action(title: "Display Alert") { [weak self] in
       let alert = UIAlertController(title: "Alert",
                                     message: "Alert message here",
-                                    preferredStyle: .Alert)
-      alert.addAction(UIAlertAction(title: "OK", style: .Cancel, handler: nil))
-      self?.presentViewController(alert, animated: true, completion: nil)
+                                    preferredStyle: .alert)
+      alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+      self?.present(alert, animated: true, completion: nil)
     }
 
     let addAction = Action(title: "Add Arbitrary Action") { [weak self] in
@@ -41,6 +41,6 @@ class ViewController: MultiActionDemoViewController {
       self.addedActionCounter += 1
     }
 
-    actions.appendContentsOf([printAction, alertAction, addAction])
+    actions.append(contentsOf: [printAction, alertAction, addAction])
   }
 }
